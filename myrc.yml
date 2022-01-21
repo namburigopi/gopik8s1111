@@ -1,20 +1,20 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: myjenkins-rc
+  name: myonlineapp-rc
 spec:
    replicas: 3
    selector: 
-     app: myjekins-pod
-     version: 2.7.2
+     app: myonlineapp
+     version: 2.7.1
    template:
      metadata:
        labels:
-          app: myjekins-pod
-          version: 2.7.2
+          app: myonlineapp
+          version: 2.7.1
      spec:
         containers:
-        - name: myjenkins-container   
-          image: maha4iac/myjenkins2
+        - name: myonlineapp-container   
+          image: maha4iac/myonlineapp:1
           ports:
-          - containerPort: 8080 
+          - containerPort: 8080  
