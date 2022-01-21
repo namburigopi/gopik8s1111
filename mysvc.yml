@@ -4,12 +4,12 @@ metadata:
   name: myonlineapp-svc
   labels:
      app: myonlineapp
-     version: 2.7.1
+     version: 2.7.2
 spec:
   type: NodePort
   ports:
     protocol: TCP
   selector:
       app: myonlineapp
-      version: 2.7.1
+      version: 2.7.2
     
